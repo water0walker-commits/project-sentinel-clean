@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: project-sentinel
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
